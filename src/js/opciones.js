@@ -1,5 +1,5 @@
 let secciones = ["calendario_mesa.html", "contacto.html"]
-let btnReservaMesa, btnContacto;
+let btnReservarMesa, btnContactenos;
 
 window.onload = init;
 
@@ -9,21 +9,21 @@ function init(){
 }
 
 function inicializarVariables(){
-    btnReservaMesa = document.getElementById("btnReservaMesa");
-    btnContacto = document.getElementById("btnRegistro");
+    btnReservarMesa = document.getElementById("btnReservarMesa");
+    btnContactenos = document.getElementById("btnContactenos");
 }
 
 function crearEventos(){
-    btnReservaMesa.addEventListener("click", enrutador);
-    btnContacto.addEventListener("click", enrutador);
+    btnReservarMesa.addEventListener("click", enrutador);
+    btnContactenos.addEventListener("click", enrutador);
 }
 
 function enrutador(evento){
     switch(evento.target.id){
-        case "btnReservaMesa":
+        case "btnReservarMesa":
             location.href = secciones[0];
             break;
-        case "btnContacto":
+        case "btnContactenos":
             location.href = secciones[1];
             break;
     }
